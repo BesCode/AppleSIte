@@ -1,0 +1,404 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --redColor: red;
+    --whiteColor: white;
+    --blackColor: black;
+}
+
+body{
+    padding: .5rem 3rem;
+}
+
+button{
+    padding: 1rem 2rem;
+    background-color: var(--redColor);
+    color: var(--whiteColor);
+    border: none;
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    &:hover{
+        background-color: white;
+        color: red;
+        border: 1px  solid black;
+    }
+}
+
+img{
+    width: 100%;
+}
+
+h3{
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+header{
+    height: 100vh;
+
+    #header{
+        height: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-weight: bolder;
+
+        span{
+            font-size: 3rem;
+            color: var(--redColor);
+        }
+
+        nav{
+            ul{
+                display: flex;
+                text-align: center;
+
+                li{
+                    list-style: none;
+                    padding-left: 1rem;
+                    a{
+                        text-decoration: none;
+                        color: var(--blackColor);
+
+                        &:hover{
+                            transition: .3s linear;
+                            color: white;
+                            background-color: var(--redColor);
+                            border-radius: 2rem;
+                            padding: .5rem 1rem;
+                        }
+                    }
+                }
+
+                // .active{
+                //     background-color: var(--redColor);
+                //     border-radius: 2rem;
+                //     padding: .5rem 1rem;
+                // }
+            }
+        }
+    }
+
+    #hero{
+        height: calc(100vh - 4rem);
+        display: grid;
+        place-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        padding: 1rem 0;
+
+        .heroText{
+            font-size: 1.8rem;
+            display: grid;
+            place-content: center;
+            p{
+               padding: .5rem 0;
+               padding-right: 15rem;
+            }
+
+            .heroImg{
+                background-color: green;
+            }
+        }
+    }
+}
+
+#brand{
+    height: fit-content;
+    margin-bottom: 2rem;
+
+    .brandFlex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+
+        .brandCard{
+            height: 30rem;
+            width: 23rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // border: 1px solid grey;
+            box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932),
+                0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+
+                img{
+                    height: 70%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+        }
+    }
+}
+
+#ship{
+    height: fit-content;
+
+    .shipFlex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .shipText,
+        .shipImg{
+            flex: .5;
+        }
+
+        h3{
+            text-align: left;
+        }
+        p{
+            padding-bottom: 1rem;
+            text-align: justify;
+        }
+    }
+}
+
+#product{
+    height: fit-content;
+    margin-bottom: 2rem;
+
+    .productText{
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .productFlex{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+
+        .productCard{
+            width: fit-content;
+            height: 27rem;
+            box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932),
+            0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+
+            img{
+                height: 70%;
+                object-fit: contain;
+                object-position: center;
+            }
+
+            .productCardText{
+                padding-left: 1rem;
+
+                button{
+                    padding: .3rem 1.3rem;
+                }
+            }
+
+           
+        }
+
+
+    }
+}
+
+#faq{
+    height: fit-content;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .faqText,
+    .faqImg{
+        flex: .5;
+    }
+
+    .faqText{
+        h3{
+            text-align: left;
+            padding-right: 20rem ;
+        }
+
+        .faqContainer{
+            display: flex;
+            flex-direction: column;
+
+            .faqRow{
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem .5em;
+                box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932),
+                0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+
+                span{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}
+
+#event{
+    margin-bottom: 2rem;
+    height: fit-content;
+
+    .eventTitle{
+        text-align: center;
+
+        p{
+            padding: 0 13rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .eventGrid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+
+        .eventCard{
+            box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932),
+                0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+            height: fit-content;
+            margin: auto;
+            padding: .7rem;
+
+            h3{
+                text-align: left;
+            }
+        }
+
+        .eventImg{
+            box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932),
+                0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+                position: relative;
+            
+            
+            
+            button{
+                position: absolute;
+                top: 250px;
+                left: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            p{
+                margin-top: 2rem;
+                text-align: center;
+            }
+
+            h4{
+                text-align: center;
+            }
+        }
+    }
+}
+
+#subscribe{
+    height: fit-content;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+
+    p{
+        text-align: justify;
+    }
+
+    input{
+        width: 100%;
+        margin: .5rem 0 ;
+        height: 2rem;
+    }
+
+    button{
+        height: 2rem;
+        width: 100%;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+
+#contact{
+    background-color: var(--blackColor);
+    color: var(--whiteColor);
+    height: fit-content;
+    margin-top: 2rem;
+
+    .contactGrid{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        h4{
+            padding-bottom: .5rem;
+        }
+
+        .contactLogo{
+            display: flex;
+            flex-direction: column;
+
+            img{
+                width: 10rem;
+            }
+
+            .socials{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .contactList{
+            padding-top: 1rem;
+
+             
+            ul{
+                padding-bottom: 1rem;
+
+                
+                li{
+                    list-style: none;
+                    padding-bottom: .5rem;
+                }
+            }
+        }
+       
+
+        .inputBtn{
+            display: flex;
+            margin-top: .5rem;
+
+            
+            button{
+                border-radius: 0;
+                height: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            input{
+                height: 2rem;
+            }
+        }
+
+       
+
+
+    }
+}

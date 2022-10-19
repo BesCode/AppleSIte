@@ -1,0 +1,498 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --redColor: red;
+  --whiteColor: white;
+  --blackColor: black;
+}
+
+body {
+  padding: .5rem 3rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  background-color: var(--redColor);
+  color: var(--whiteColor);
+  border: none;
+  border-radius: 3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+button:hover {
+  background-color: white;
+  color: red;
+  border: 1px  solid black;
+}
+
+img {
+  width: 100%;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: .5rem;
+}
+
+header {
+  height: 100vh;
+}
+
+header #header {
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-weight: bolder;
+}
+
+header #header span {
+  font-size: 3rem;
+  color: var(--redColor);
+}
+
+header #header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+header #header nav ul li {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+header #header nav ul li a {
+  text-decoration: none;
+  color: var(--blackColor);
+}
+
+header #header nav ul li a:hover {
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  color: white;
+  background-color: var(--redColor);
+  border-radius: 2rem;
+  padding: .5rem 1rem;
+}
+
+header #hero {
+  height: calc(100vh - 4rem);
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0;
+}
+
+header #hero .heroText {
+  font-size: 1.8rem;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+header #hero .heroText p {
+  padding: .5rem 0;
+  padding-right: 15rem;
+}
+
+header #hero .heroText .heroImg {
+  background-color: green;
+}
+
+#brand {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 2rem;
+}
+
+#brand .brandFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#brand .brandFlex .brandCard {
+  height: 30rem;
+  width: 23rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932), 0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+          box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932), 0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+}
+
+#brand .brandFlex .brandCard img {
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#ship {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#ship .shipFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#ship .shipFlex .shipText,
+#ship .shipFlex .shipImg {
+  -webkit-box-flex: .5;
+      -ms-flex: .5;
+          flex: .5;
+}
+
+#ship .shipFlex h3 {
+  text-align: left;
+}
+
+#ship .shipFlex p {
+  padding-bottom: 1rem;
+  text-align: justify;
+}
+
+#product {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 2rem;
+}
+
+#product .productText {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+#product .productFlex {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+#product .productFlex .productCard {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 27rem;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932), 0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+          box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932), 0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+}
+
+#product .productFlex .productCard img {
+  height: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#product .productFlex .productCard .productCardText {
+  padding-left: 1rem;
+}
+
+#product .productFlex .productCard .productCardText button {
+  padding: .3rem 1.3rem;
+}
+
+#faq {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#faq .faqText,
+#faq .faqImg {
+  -webkit-box-flex: .5;
+      -ms-flex: .5;
+          flex: .5;
+}
+
+#faq .faqText h3 {
+  text-align: left;
+  padding-right: 20rem;
+}
+
+#faq .faqText .faqContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#faq .faqText .faqContainer .faqRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem .5em;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932), 0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+          box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932), 0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+}
+
+#faq .faqText .faqContainer .faqRow span {
+  cursor: pointer;
+}
+
+#event {
+  margin-bottom: 2rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#event .eventTitle {
+  text-align: center;
+}
+
+#event .eventTitle p {
+  padding: 0 13rem;
+  margin-bottom: 1rem;
+}
+
+#event .eventGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+#event .eventGrid .eventCard {
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932), 0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+          box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932), 0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  padding: .7rem;
+}
+
+#event .eventGrid .eventCard h3 {
+  text-align: left;
+}
+
+#event .eventGrid .eventImg {
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932), 0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+          box-shadow: 0px 5px 10px 0px rgba(214, 208, 208, 0.932), 0px 5px 5px 0px rgba(248, 244, 244, 0.932);
+  position: relative;
+}
+
+#event .eventGrid .eventImg button {
+  position: absolute;
+  top: 250px;
+  left: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#event .eventGrid .eventImg p {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#event .eventGrid .eventImg h4 {
+  text-align: center;
+}
+
+#subscribe {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+#subscribe p {
+  text-align: justify;
+}
+
+#subscribe input {
+  width: 100%;
+  margin: .5rem 0;
+  height: 2rem;
+}
+
+#subscribe button {
+  height: 2rem;
+  width: 100%;
+  border-radius: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contact {
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 2rem;
+}
+
+#contact .contactGrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact .contactGrid h4 {
+  padding-bottom: .5rem;
+}
+
+#contact .contactGrid .contactLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact .contactGrid .contactLogo img {
+  width: 10rem;
+}
+
+#contact .contactGrid .contactLogo .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contact .contactGrid .contactList {
+  padding-top: 1rem;
+}
+
+#contact .contactGrid .contactList ul {
+  padding-bottom: 1rem;
+}
+
+#contact .contactGrid .contactList ul li {
+  list-style: none;
+  padding-bottom: .5rem;
+}
+
+#contact .contactGrid .inputBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: .5rem;
+}
+
+#contact .contactGrid .inputBtn button {
+  border-radius: 0;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contact .contactGrid .inputBtn input {
+  height: 2rem;
+}
+/*# sourceMappingURL=index.css.map */
