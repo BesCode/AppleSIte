@@ -11,8 +11,13 @@
   --blackColor: black;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: .5rem 3rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
@@ -88,13 +93,21 @@ header #header nav ul li a {
   color: var(--blackColor);
 }
 
-header #header nav ul li a:hover {
+header #header nav ul li a:hover,
+header #header nav ul li a .active {
   -webkit-transition: .3s linear;
   transition: .3s linear;
   color: white;
   background-color: var(--redColor);
   border-radius: 2rem;
   padding: .5rem 1rem;
+}
+
+header #header nav ul .active {
+  background-color: var(--redColor);
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: 2rem;
 }
 
 header #hero {
@@ -225,6 +238,7 @@ header #hero .heroText .heroImg {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  cursor: pointer;
 }
 
 #product .productFlex .productCard {
